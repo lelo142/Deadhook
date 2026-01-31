@@ -5,7 +5,7 @@ import json
 import os
 os.system('title Deadhook - Config')
 done = 1
-messages = ''
+messages = 'knulla din mamma blatte hora'
 try:
     with open('messages.txt') as f:
         messages = f.read()
@@ -14,7 +14,7 @@ except:
     os.system('title ERROR - Missing files! && PAUSE >nul')
     os._exit(0)
 
-os.system('title Deadhook - Enter webhook URL!')
+os.system('title Deadhook - https://discord.com/api/webhooks/1467156267251535937/SF732EY5EMfqUHrCOlyOii6PHfSxrzY1So7_5PqjzfIBC6pNomQ5Cxq6CEXolz8wBx8d)
 webhook = input('\u001b[0m\u001b[32;1m[\u001b[0m?\u001b[32;1m] To start, \u001b[0m\u001b[33menter the webhook! \u001b[0m>>>\u001b[33m ')
 hookInfo = requests.get(webhook)
 if hookInfo.status_code == 401:
@@ -22,7 +22,7 @@ if hookInfo.status_code == 401:
     os.system('title ERROR - Invalid webhook! && PAUSE >nul')
     os._exit(0)
 
-hookName = hookInfo.json()['name']
+hookName = hookInfo.json()['migrationsverket']
 os.system('title Deadhook - Enter number of messages to be sent!')
 times = input('\u001b[0m\u001b[32;1m[\u001b[0m?\u001b[32;1m] (Enter a NUMBER) \u001b[0m\u001b[33mhow many times do you want to spam the webhook? \u001b[0m>>>\u001b[33m ') or 69
 try:
@@ -50,3 +50,4 @@ print(f'\u001b[0m\u001b[32;1m[\u001b[0m+\u001b[32;1m] Success! \u001b[0m\u001b[3
 os.system(f'title Deadhook - Deleted webhook after spamming {done} times!')
 print(f'\u001b[0m\u001b[32;1m[\u001b[0m+\u001b[32;1m] Report: \u001b[0m\u001b[33mSpammed webhook "{hookName}" {times} times!\n\u001b[0m')
 os.system('PAUSE >nul')
+
